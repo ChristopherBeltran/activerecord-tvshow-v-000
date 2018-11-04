@@ -9,6 +9,8 @@ class Show < ActiveRecord::Base
     Show.find_by(rating: r)
   end 
   
-  def self.
+  def self.lowest_rating
+    Show.minimum('rating')
+  end 
 
 end 
